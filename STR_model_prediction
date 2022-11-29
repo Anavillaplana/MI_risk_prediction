@@ -140,16 +140,16 @@ sci.stats.wilcoxon(outer_results_rfc_DfPRS['AUC'], y=outer_results_rfc_PRS['AUC'
 
 
 #Obtaining the file with the predictions of all models 
-F0 = pd.read_csv("STR_AnyBN_models_predictions_2_F0.csv", header = None)
-F1 = pd.read_csv("STR_AnyBN_models_predictions_2_F1.csv", header = None)
-F2 = pd.read_csv("STR_AnyBN_models_predictions_2_F2.csv", header = None)
-F3 = pd.read_csv("STR_AnyBN_models_predictions_2_F3.csv", header = None)
-F4 = pd.read_csv("STR_AnyBN_models_predictions_2_F4.csv", header = None)
-F5 = pd.read_csv("STR_AnyBN_models_predictions_2_F5.csv", header = None)
-F6 = pd.read_csv("STR_AnyBN_models_predictions_2_F6.csv", header = None)
-F7 = pd.read_csv("STR_AnyBN_models_predictions_2_F7.csv", header = None)
-F8 = pd.read_csv("STR_AnyBN_models_predictions_2_F8.csv", header = None)
-F9 = pd.read_csv("STR_AnyBN_models_predictions_2_F9.csv", header = None)
+F0 = pd.read_csv("STR_AnyBN_models_predictions_F0.csv", header = None)
+F1 = pd.read_csv("STR_AnyBN_models_predictions_F1.csv", header = None)
+F2 = pd.read_csv("STR_AnyBN_models_predictions_F2.csv", header = None)
+F3 = pd.read_csv("STR_AnyBN_models_predictions_F3.csv", header = None)
+F4 = pd.read_csv("STR_AnyBN_models_predictions_F4.csv", header = None)
+F5 = pd.read_csv("STR_AnyBN_models_predictions_F5.csv", header = None)
+F6 = pd.read_csv("STR_AnyBN_models_predictions_F6.csv", header = None)
+F7 = pd.read_csv("STR_AnyBN_models_predictions_F7.csv", header = None)
+F8 = pd.read_csv("STR_AnyBN_models_predictions_F8.csv", header = None)
+F9 = pd.read_csv("STR_AnyBN_models_predictions_F9.csv", header = None)
 pred_results_STR = pd.concat([F0,F1, F2,F3, F4, F5, F6, F7, F8, F9], axis=0)
 pred_results_STR.columns = ['True_data', 'index', 'SCORE', 'RFC_Df', 'RFC_DfPRS', 'RFC_PRS']
 pred_results_STR.to_csv("STR_BN_models_predictions_10FCV_complete.csv", index=None)
